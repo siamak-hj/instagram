@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+.logo {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.logo img {
+    width: 30%;
+    margin: 0 auto;
+    display: block;
+
+}
+
+.stories {
+    background: #fafafa;
+    padding: 10px 0 10px 10px;
+}
+
+.stories .profile {
+    margin: 0 5px;
+}
+
+.stories .profile img {
+    padding: 5px;
+    border: 2px solid #dc2576;
+    height: auto;
+    border-radius: 50%;
+    width: 60px;
+}
+.stories .profile-name {
+    color: #262626;
+    display: block;
+    font-size: 12px;
+    line-height: 14px;
+    max-width: 64px;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+}
+
+.stories .swiper-slide {
+    margin: 0 !important;
+    width: 74px !important;
+}
+
+.post {
+    border-top: 1px solid #e6e6e6;
+}
+
+.post .post-head {
+    width: 100%;
+    /* background: #fafafa; */
+    padding: 5px 10px;
+    overflow: hidden;
+}
+
+.post .post-head .post-profile {
+    float: left;
+}
+
+.post .post-head .post-profile img {
+    padding: 3px;
+    border-radius: 50%;
+    width: 45px;
+    border: 1px solid #ccc;
+    /* clear: both; */
+}
+
+.post .post-head .profile-description {
+    padding: 4px;
+    margin-left: 6px;
+    float: left;
+    /* vertical-align: middle; */
+}
+
+.post .post-head .profile-description .username {
+    font-weight: 600;
+    line-height: 22px;
+    color: #262626;
+    font-size: 14px;
+}
+
+.post .post-head .profile-description .location {
+    font-size: 12px;
+
+}
+
+.post .post-pic {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.post .post-pic .post-img {
+    display: block;
+    width: 100%;
+
+}
+
+.post .post-pic .post-big-like {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    margin: 0 auto;
+    right: 0;
+    transform: scale(0);
+    opacity: 0;
+    animation-duration: .45s;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in-out;
+    animation-name: biglike;
+    display: none;
+}
+
+.post .icon-bar {
+    padding: 5px 10px;
+    height: 50px;
+
+}
+
+.post .icon-bar .border-heart {
+    width: 40px;
+    height: 40px;
+    background: url(images/border-like.png) no-repeat;
+}
+
+.unlike {
+    background: url(images/border-like.png) no-repeat !important;
+}
+
+.like {
+    background: url(images/background-like.png) no-repeat !important;
+    animation-timing-function: ease-in-out;
+    transform: scale(1);
+    animation-name: like;
+    animation-duration: .45s;
+}
+
+@keyframes like {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes biglike {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    15% {
+        opacity: .9;
+        transform: scale(1.2);
+    }
+
+    30% {
+        transform: scale(.95);
+    }
+
+    45% {
+        opacity: .9;
+        transform: scale(1);
+    }
+
+    80% {
+        opacity: .9;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
